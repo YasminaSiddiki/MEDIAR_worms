@@ -1,0 +1,30 @@
+# Clone MEDIAR github repo
+git clone https://github.com/Lee-Gihun/MEDIAR.git
+cd MEDIAR
+
+# Clone MEDIAR_worms github repo
+git clone https://github.com/YasminaSiddiki/MEDIAR_worms.git
+
+# Replace files: generate_mapping.py, Trainer.py from MEDIAR_worms to MEDIAR
+
+# Install dependencies
+pip install -r MEDIAR/requirements.txt
+pip install segmentation-models-pytorch==0.3.1
+pip install wandb
+wandb off
+
+# Prepare data
+python MEDIAR_worms/code/train/prepare_data.py your_data.zip
+
+# Generate mapping
+python MEDIAR_worms/code/train/generate_mapping.py --root=data/dataset
+
+# Load weights for fine-tuning
+mkdir weights
+mkdir weights/pretrained
+gdown https://drive.google.com/uc?id=1v5tYYJDqiwTn_mV0KyX5UEonlViSNx4i -O weights/pretrained/phase1.pth
+gdown https://drive.google.com/uc?id=1NHDaYvsYz3G0OCqzegT-bkNcly2clPGR -O weights/pretrained/phase2.pth
+
+# Train model
+python main.py --config_path=MEDIAR_worms/code/train/your_configure.json
+(for phase1/phase2 use finetuning1.json/finetuning2.json)

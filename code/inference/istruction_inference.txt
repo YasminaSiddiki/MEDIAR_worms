@@ -1,0 +1,16 @@
+# Clone MEDIAR github repo
+git clone https://github.com/Lee-Gihun/MEDIAR.git
+cd MEDIAR
+
+# Clone MEDIAR_worms github repo
+git clone https://github.com/YasminaSiddiki/MEDIAR_worms.git
+
+# Install dependencies
+pip install -r MEDIAR/requirements.txt
+pip install segmentation-models-pytorch==0.3.1
+
+# If your data is in .png, convert to .tiff
+python MEDIAR_worms/code/inference/transform_data_png_to_tiff.py --input_dir=dir_with_png --output_dir=output_dir
+
+# Make prediction
+python MEDIAR_worms/code/inference/inference.py --input_dir=dir_with_tiff --output_dir=output_dir
