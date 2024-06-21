@@ -5,12 +5,17 @@
    - train - code part for model training
  - data
    - Data for testing - https://drive.google.com/file/d/1VPFhFB-MKogfRdc63wlM-hVk-8CMi94d/view?usp=sharing
-   - Load train data from: https://drive.google.com/file/d/1_P6CzW-OnISIimxYtiKME_AKz-RF5zhh/view?usp=sharing
+   - Load train data from: https://drive.google.com/file/d/1rLwO1T3vZuWjD82afqU6DZ8MqxpAKjlS/view?usp=sharing
    - result_example.png - result examples
+   - Load train data for heads from: https://drive.google.com/file/d/1zQzAmvdLPygq6F0STitzUmojgKw_XXdb/view?usp=sharing
  - models - weights of trained models
    - model phase 1 - https://drive.google.com/file/d/1ctmXVRPG7e2ZJ1JqrIEN5t-ZmyK5KXTl/view?usp=sharing
    - model phase 2 - https://drive.google.com/file/d/1OGp-rb8wOZz8JKHZsjm7957z3OeyK6lA/view?usp=sharing
  - util_workbook_MEDIAR_worms.ipynb - never mind, but if you have some problem you can try it on colab
+ - final models
+    - body phase1: https://drive.google.com/file/d/1_sgMFFJEu5qu3wMmno725ERfKcGClc4D/view?usp=sharing
+    - body phase2: https://drive.google.com/file/d/1dcs6ZytUe4cNOXxz4lB_RYu3oEtcvXgt/view?usp=sharing
+    - head phase2: https://drive.google.com/file/d/1I3l780PkxGNO5d6_7hepJqMZiWgmNlys/view?usp=sharing 
 
 ## Install project
 ### Clone MEDIAR github repo
